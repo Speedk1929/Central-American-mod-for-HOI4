@@ -1,0 +1,100 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+YUG_jadransko_brodogradiliste_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_2
+	allowed = { 
+		tag = YUG
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+FED_skid_tank_divison_organization = {
+	include = generic_medium_tank_organization
+	icon = GFX_idea_bul_ratniks
+	allowed = { 
+		tag = FED
+	}
+}
+
+FED_rubbi_tank_works_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_cze_skoda_armor
+	allowed = { 
+		tag = FED
+	}
+}
+
+
+FED_skid_organization = { #TODO_Manu: Could do with an extra trait 
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_bul_ratniks
+	allowed = { 
+		tag = FED
+	}
+
+}
+FED_rubbi_organization = { #TODO_Manu: Could do with an extra trait 
+	include = generic_multi_role_aircraft_organization
+	icon = GFX_idea_cze_skoda_works
+	allowed = { 
+		tag = FED
+	}
+
+}
+FED_rubbiskid_organization = { #TODO_Manu: Could do with an extra trait 
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_YUG_rogozarski
+	allowed = { 
+		tag = FED
+	}
+
+}
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+YUG_zastava_arms_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_zastava_arms
+	allowed = { 
+		tag = YUG
+	}
+}

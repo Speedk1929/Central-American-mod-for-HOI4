@@ -1,0 +1,209 @@
+ideas = {
+	
+	country = {
+
+		devalued_peso = {
+			picture = idea_nor_printing_money
+
+			allowed = {
+				tag = FED
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				trade_opinion_factor = 0.50
+			}
+
+		}
+		tax_the_banana_companies = {
+			picture = idea_arg_political_corruption_modifier
+
+			allowed = {
+				tag = FED
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+
+		}
+		
+		severely_underdeveloped_industry_0 = {
+			picture = POL_disjointed_industry
+			
+			allowed = {
+				tag = FED
+			}
+			available = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				local_resources_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.25
+				production_speed_arms_factory_factorv = -0.5
+				production_factory_max_efficiency_factor = -0.3
+				production_speed_buildings_factor = -0.35
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.35
+			}
+		}
+		severely_underdeveloped_industry_1 = {
+			picture = POL_disjointed_industry
+			
+			allowed = {
+				tag = FED
+			}
+			available = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				local_resources_factor = -0.05
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.10
+				production_speed_arms_factory_factorv = -0.25
+				production_factory_max_efficiency_factor = -0.15
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.25
+			}
+		}
+		severely_underdeveloped_industry_2 = {
+			picture = POL_disjointed_industry
+			
+			allowed = {
+				tag = FED
+			}
+			available = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+				production_speed_arms_factory_factorv = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.15
+			}
+		}
+		developed_industry = {
+			picture = idea_ARG_economic_reactivation
+			
+			allowed = {
+				tag = FED
+			}
+			available = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+			}
+		}
+
+
+		FED_begin_economic_recovery = 
+		{
+
+			picture = chi_hyper_inflation
+			allowed = {
+				tag = FED
+			}
+			available = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+
+				economy_cost_factor = -0.20
+				trade_laws_cost_factor = -0.20
+				
+			}
+
+		}
+
+		disjointed_nation = {
+			picture = generic_disjointed_gov    
+			
+			allowed = {
+				tag = FED
+			}
+			available = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_gain = -0.25
+				conscription_factor = -0.1
+				stability_factor = -0.45
+				mobilization_speed = -0.2
+			}
+		}
+
+		pyrrhic_victor_of_the_2nd_mosquito_war = {
+			picture = generic_victors_of_ww1  
+			
+			allowed = {
+				tag = FED
+			}
+			available = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				
+				conscription_factor = -0.4
+				war_support_factor = -0.45
+				army_org_factor = -0.12
+				army_speed_factor = -0.05
+				training_time_factor = 0.25
+
+
+			}
+		}
+
+
+
+
+	}
+
+}

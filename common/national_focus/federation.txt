@@ -1,0 +1,2221 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = federation_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = FED
+		}
+	}
+	
+	default = no
+
+
+	focus = {
+		id = FED_parliamentary_address
+		icon = GFX_goal_support_democracy
+		x = 23
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_offer_concessions_to_parliment_members
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = 21
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_parliamentary_address}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_expand_the_federal_government
+		icon = GFX_focus_generic_improve_the_administration
+		x = 25
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_parliamentary_address}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = Fed_discourage_fascists_in_parliament
+		icon = GFX_focus_generic_industrialists
+		x = 22
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_offer_concessions_to_parliment_members}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_work_with_fascists_in_government
+		icon = GFX_focus_POL_complete_april_constitution
+		x = 24
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_expand_the_federal_government}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_improve_federal_bureaucracy
+		icon = GFX_focus_NORDIC_com_capstone_research
+		x = 26
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_work_with_fascists_in_government}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_improve_access_to_voting
+		icon = GFX_focus_NORDIC_dem_institution_2
+		x = 18
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = Fed_discourage_fascists_in_parliament}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_send_represenatives_to_panama
+		icon = GFX_focus_NORDIC_dem_institution_1
+		x = 22
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = Fed_discourage_fascists_in_parliament}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_promote_free_trade
+		icon = GFX_focus_NORDIC_dem_selector_civilian
+		x = 20
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = Fed_discourage_fascists_in_parliament}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_encourage_centralization_of_power
+		icon = GFX_focus_NORDIC_com_institution_1
+		x = 24
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_work_with_fascists_in_government}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_celebrate_the_national_military
+		icon = GFX_focus_NORDIC_com_army
+		x = 27
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_improve_federal_bureaucracy}
+		prerequisite = {focus = FED_foster_militaristic_sentiments}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_regin_in_the_islands
+		icon = GFX_focus_generic_treaty
+		x = 23
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_integrate_panama}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_integrate_panama
+		icon = GFX_focus_generic_treaty
+		x = 23
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_send_represenatives_to_panama focus = FED_improve_federal_bureaucracy}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_create_executive_branch
+		icon = GFX_focus_NORDIC_com_capstone_materiel
+		x = 25
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_improve_federal_bureaucracy}
+		prerequisite = {focus = FED_encourage_centralization_of_power}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_foster_militaristic_sentiments
+		icon = GFX_focus_NORDIC_com_selector_army
+		x = 28
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_work_with_fascists_in_government}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_root_out_corruption
+		icon = GFX_focus_generic_court
+		x = 19
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_improve_access_to_voting}
+		prerequisite = {focus = FED_promote_free_trade}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_give_more_power_to_the_parliament
+		icon = GFX_focus_NORDIC_dem_capstone_research
+		x = 21
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_send_represenatives_to_panama}
+		prerequisite = {focus = FED_promote_free_trade}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	
+	focus = {
+		id = FED_restore_trust_in_institutions
+		icon = GFX_focus_NORDIC_dem_form_alliance
+		x = 20
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_root_out_corruption focus = FED_give_more_power_to_the_parliament}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+
+	focus = {
+		id = FED_create_the_federal_welfare_system
+		icon = GFX_focus_NORDIC_dem_capstone_navy
+		x = 18
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_root_out_corruption}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+		focus = {
+		id = FED_strengthen_the_executive_branch
+		icon = GFX_focus_NORDIC_com_form_alliance
+		x = 26
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_create_executive_branch focus = FED_celebrate_the_national_military}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_military_officers_in_political_offices
+		icon = GFX_focus_NORDIC_com_institution_2
+		x = 28
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_create_executive_branch}
+		prerequisite = {focus = FED_celebrate_the_national_military}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_reborn_nation
+		icon = GFX_focus_EST_republican_defence_league
+		x = 23
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_regin_in_the_islands}
+		prerequisite = {focus = FED_strengthen_the_executive_branch focus = FED_restore_trust_in_institutions}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_ban_the_fascists
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 20
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_restore_trust_in_institutions}
+		prerequisite = {focus = FED_reborn_nation}
+		mutually_exclusive = {focus = FED_santiagos_coup}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_santiagos_coup
+		icon = GFX_focus_ETH_amedeos_feast_of_maskal
+		x = 26
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_strengthen_the_executive_branch}
+		prerequisite = {focus = FED_reborn_nation}
+		mutually_exclusive = {focus = FED_ban_the_fascists}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_our_own_path_to_democracy
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 20
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_ban_the_fascists}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_strengthen_our_grip_on_power
+		icon = GFX_goal_generic_forceful_treaty
+		x = 26
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_santiagos_coup}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_dissolve_the_parliament
+		icon = GFX_focus_SWI_dissolve_the_federal_council
+		x = 26
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_strengthen_our_grip_on_power}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_dissolve_the_parliament
+		icon = GFX_focus_SWI_dissolve_the_federal_council
+		x = 26
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_strengthen_our_grip_on_power}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_indiginous_revanchinism
+		icon = GFX_focus_CHL_enforce_the_chilean_identity
+		x = 33
+		y = 10
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_dissolve_the_parliament}
+		mutually_exclusive = {focus = FED_never_another_mosquito_war}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_never_another_mosquito_war
+		icon = GFX_focus_generic_limited_social_mobilization
+		x = 26
+		y = 10
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_dissolve_the_parliament}
+		mutually_exclusive = {focus = FED_indiginous_revanchinism}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_friends_in_europe
+		icon = GFX_focus_ger_reichskommisariats
+		x = 24
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_never_another_mosquito_war}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_colombia_shall_pay
+		icon = GFX_focus_generic_attack_colombia
+		x = 26
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_never_another_mosquito_war}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_venezuela_shall_pay
+		icon = GFX_focus_generic_attack_venezuela
+		x = 26
+		y = 12
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_colombia_shall_pay}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_secure_the_northern_front
+		icon = GFX_focus_attack_mexico
+		x = 28
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_never_another_mosquito_war}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_the_great_eagle_to_the_north
+		icon = GFX_focus_generic_attack_usa
+		x = 27
+		y = 13
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_secure_the_northern_front}
+		prerequisite = {focus = FED_venezuela_shall_pay}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_anti_colonialism
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		x = 33
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_indiginous_revanchinism}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	
+	focus = {
+		id = FED_united_by_force
+		icon = GFX_goal_generic_dangerous_deal
+		x = 32
+		y = 12
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_anti_colonialism}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_united_by_spirit
+		icon = GFX_goal_generic_improve_relations
+		x = 34
+		y = 12
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_anti_colonialism}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_liberate_the_americas
+		icon = GFX_focus_BRA_north_and_south_america
+		x = 33
+		y = 13
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_united_by_force focus = FED_united_by_spirit}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_the_great_crusade
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 33
+		y = 14
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_liberate_the_americas}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+
+	focus = {
+		id = FED_like_minded_neighbors
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 13
+		y = 10
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_the_great_threat_of_fascism}
+		prerequisite = {focus = FED_accept_economic_intergration}
+
+		mutually_exclusive = {focus = FED_our_help_for_their_holdings}
+		mutually_exclusive = {focus = FED_expanding_the_federation}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_the_great_threat_of_fascism
+		icon = GFX_focus_generic_spread_fascism
+		x = 20
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_our_own_path_to_democracy}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_our_help_for_their_holdings
+		icon = GFX_focus_ARG_join_the_allies
+		x = 17
+		y = 10
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		prerequisite = {focus = FED_the_great_threat_of_fascism}
+		mutually_exclusive = {focus = FED_expanding_the_federation}
+		mutually_exclusive = {focus = FED_like_minded_neighbors} 
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_expanding_the_federation
+		icon = GFX_focus_generic_little_entente
+		x = 22
+		y = 10
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		mutually_exclusive = {focus = FED_our_help_for_their_holdings}
+		mutually_exclusive = {focus = FED_like_minded_neighbors}
+		prerequisite = {focus = FED_the_great_threat_of_fascism}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+
+	focus = {
+		id = FED_an_old_ally
+		icon = GFX_goal_generic_alliance
+		x = 22
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_expanding_the_federation}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_ask_for_extra_industry
+		icon = GFX_focus_DEN_no_regulations
+		x = 13
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_like_minded_neighbors}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_american_advisors
+		icon = GFX_focus_generic_military_academy
+		x = 13
+		y = 12
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_ask_for_extra_industry}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_destroy_global_fascism
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 13
+		y = 13
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_american_advisors}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_disrupt_axis_access_to_oil
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 17
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_our_help_for_their_holdings}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_volunteers_to_europe
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 17
+		y = 12
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_our_help_for_their_holdings}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_ask_for_extra_support
+		icon = GFX_focus_generic_combined_arms
+		x = 17
+		y = 13
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_our_help_for_their_holdings}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_invite_colombia
+		icon = GFX_goal_generic_alliance
+		x = 21
+		y = 13
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_repair_relations_with_colombia}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_repair_relations_with_colombia
+		icon = GFX_goal_generic_major_alliance
+		x = 22
+		y = 12
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_an_old_ally}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_an_enemy_of_democracy
+		icon = GFX_focus_generic_attack_colombia
+		x = 23
+		y = 13
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_repair_relations_with_colombia}
+		mutually_exclusive = {focus = FED_invite_colombia}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_south_american_nazis
+		icon = GFX_focus_generic_attack_venezuela
+		x = 22
+		y = 14
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_invite_colombia focus = FED_an_enemy_of_democracy}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_invite_brazil
+		icon = GFX_goal_generic_alliance
+		x = 23
+		y = 15
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_south_american_nazis}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+	focus = {
+		id = FED_invite_mexcico
+		icon = GFX_goal_generic_alliance
+		x = 21
+		y = 15
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {focus = FED_south_american_nazis}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = FED_recognize_the_state_of_the_economy
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 11
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_fund_research
+		icon = GFX_focus_research
+		x = 11
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_recognize_the_state_of_the_economy}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_build_new_colleges
+		icon = GFX_focus_research2
+		x = 11
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_fund_research}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_draw_foreign_talent
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 11
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_build_new_colleges}
+		prerequisite = {focus = FED_a_strong_industry focus = FED_deny_economic_intergration}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_look_internally
+		icon = GFX_focus_generic_support_the_left_right
+		x = 8
+		y = 1
+		cost = 5
+		mutually_exclusive = {focus = FED_look_externally}
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_recognize_the_state_of_the_economy}
+		
+		completion_reward = {
+			add_timed_idea = {
+
+				idea = FED_begin_economic_recovery
+				days = 365
+			}
+			 
+			
+		}
+		
+	}
+
+	focus = {
+		id = FED_lower_unemployment
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 9
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_look_internally}
+		completion_reward = {
+			add_stability = 0.10
+
+		}
+		
+	}
+	focus = {
+		id = FED_devalue_our_currency
+		icon = GFX_focus_ARG_anti_corruption_policies
+		x = 7
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_look_internally}
+
+		completion_reward = {
+			add_ideas = devalued_peso
+			
+		}
+		
+	}
+	focus = {
+		id = FED_build_a_small_industry
+		icon = GFX_focus_generic_industry_1
+		x = 8
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_devalue_our_currency}
+		prerequisite = {focus = FED_lower_unemployment}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = severely_underdeveloped_industry_0
+				add_idea = severely_underdeveloped_industry_1
+			}
+
+		}
+		
+	}
+	focus = {
+		id = FED_build_up_local_industry
+		icon = GFX_focus_DEN_limited_regulations
+		x = 7
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_build_a_small_industry}
+		completion_reward = {
+
+			add_extra_state_shared_building_slots = 2
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+				}
+		}
+		
+	}
+	focus = {
+		id = FED_tax_the_banana_companies
+		icon = GFX_focus_generic_coffee
+		x = 9
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_build_a_small_industry}
+		completion_reward = {
+			
+			add_ideas = tax_the_banana_companies
+
+		}
+		
+	}
+	focus = {
+		id = FED_build_a_medium_industry
+		icon = GFX_focus_generic_industry_2
+		x = 8
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_build_up_local_industry}
+		prerequisite = {focus = FED_tax_the_banana_companies}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = severely_underdeveloped_industry_1
+				add_idea = severely_underdeveloped_industry_2
+			}
+			add_state_resource = {
+				state = 314
+				resource = steel
+				amount = 24  
+			}
+		}
+		
+	}
+	focus = {
+		id = FED_expand_the_mining_industry
+		icon = GFX_focus_generic_mining_industry
+		x = 7
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_build_a_medium_industry}
+		completion_reward = {
+
+			local_resources_factor = 0.20
+
+			add_state_resource = {
+				state = 304 
+				resource = oil
+				amount = 3 
+			}
+			add_state_resource = {
+				state = 313 
+				resource = oil
+				amount = 5 
+			}
+
+		}
+		
+	}
+	focus = {
+		id = FED_improve_the_rail
+		icon = GFX_focus_generic_railroad
+		x = 9
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_build_a_medium_industry}
+		completion_reward = {
+			314 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			313 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			315 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			316 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+		}
+		
+	}
+	focus = {
+		id = FED_a_strong_industry
+		icon = GFX_focus_generic_industry_3
+		x = 8
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 12	
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_expand_the_mining_industry}
+		prerequisite = {focus = FED_improve_the_rail}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = severely_underdeveloped_industry_2
+				add_idea = developed_industry
+			}
+
+		}
+		
+	}
+
+
+	focus = {
+		id = FED_look_externally
+		icon = GFX_focus_mex_privatisation
+		x = 14
+		y = 1
+		cost = 5
+		mutually_exclusive = {focus = FED_look_internally}
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_recognize_the_state_of_the_economy}
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_approach_the_us
+		icon = GFX_focus_generic_befriend_usa
+		x = 14
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_look_externally}
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_deregulate_the_banana_companies
+		icon = GFX_focus_DEN_heavy_regulations
+		x = 13
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_approach_the_us}
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_invite_us_investors
+		icon = GFX_focus_generic_american_investments
+		x = 15
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_approach_the_us}
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_infrastructure_creation
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 14
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_deregulate_the_banana_companies}
+		prerequisite = {focus = FED_invite_us_investors}
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_worker_focused_education
+		icon = GFX_goal_generic_scientific_exchange
+		x = 13
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_infrastructure_creation}
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_meeting_quotas
+		icon = GFX_focus_generic_public_works
+		x = 15
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_infrastructure_creation}
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+
+	focus = {
+		id = FED_adopt_the_us_dollar
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 14
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_worker_focused_education}
+		prerequisite = {focus = FED_meeting_quotas}
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_deny_economic_intergration
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 13
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_adopt_the_us_dollar}
+		mutually_exclusive = {focus = FED_accept_economic_intergration}
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_accept_economic_intergration
+		icon = GFX_focus_CZE_german_puppet
+		x = 15
+		y = 7
+		cost = 5
+		
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		prerequisite = {focus = FED_adopt_the_us_dollar}
+		mutually_exclusive = {focus = FED_deny_economic_intergration}
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_the_shawdow_of_mosquito_war
+		icon = GFX_focus_generic_infiltration
+		x = 35
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_federation_high_command
+		icon = GFX_focus_POL_sanation_right
+		x = 34
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_lessons_of_the_war}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_federal_training_act
+		icon = GFX_focus_chi_army_reform
+		x = 39
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_lessons_of_the_war}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_lessons_of_the_war
+		icon = GFX_goal_generic_position_armies
+		x = 35
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_the_shawdow_of_mosquito_war}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_bring_in_new_officers
+		icon = GFX_focus_generic_military_mission
+		x = 34
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_federation_high_command}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_reorganize_the_army
+		icon = GFX_focus_SOV_mobilization_plan
+		x = 36
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_federation_high_command}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_increase_military_salaries
+		icon = GFX_focus_ETH_adopt_the_lira
+		x = 32
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_federation_high_command}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_Department_of_the_armed_forces
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 34
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_increase_military_salaries}
+		prerequisite = {focus = FED_bring_in_new_officers}
+		prerequisite = {focus = FED_reorganize_the_army}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_quality
+		icon = GFX_focus_generic_license_production
+		x = 38
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_federal_training_act}
+		mutually_exclusive = {focus = FED_quanity}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_quanity
+		icon = GFX_focus_generic_limited_social_mobilization
+		x = 40
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_federal_training_act}
+		mutually_exclusive = {focus = FED_quality}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_military_industry_reform
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 39
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_quality focus = FED_quanity}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_weapon_standardization
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
+		x = 37
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_military_industry_reform}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_artillery_production
+		icon = GFX_goal_generic_army_artillery2
+		x = 39
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_military_industry_reform}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_motorization
+		icon = GFX_focus_SOV_the_road_of_life
+		x = 41
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_military_industry_reform}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_build_new_major_military_industry
+		icon = GFX_focus_generic_reorient_production
+		x = 39
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_weapon_standardization}
+		prerequisite = {focus = FED_artillery_production}
+		prerequisite = {focus = FED_motorization}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_renovated_army
+		icon = GFX_focus_SMB_special_forces_option_3
+		x = 36
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_Department_of_the_armed_forces}
+		prerequisite = {focus = FED_build_new_major_military_industry}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_sorry_state_of_the_airforce
+		icon = GFX_goal_anti_comintern_pact
+		x = 46
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_multi_role_fighters
+		icon = GFX_goal_generic_air_fighter
+		x = 46
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_airforce_supports_the_army focus = FED_airforce_aerial_superiority}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_dedicated_cas
+		icon = GFX_focus_generic_cas_aircraft
+		x = 44
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_airforce_supports_the_army}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+
+	focus = {
+		id = FED_dedicated_aerial_supremacy_fighters
+		icon = GFX_goal_generic_air_fighter2
+		x = 48
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_airforce_aerial_superiority}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	
+
+	focus = {
+		id = FED_airforce_supports_the_army
+		icon = GFX_focus_NORDIC_com_airforce
+		x = 45
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_sorry_state_of_the_airforce}
+		mutually_exclusive = {focus = FED_airforce_aerial_superiority}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_airforce_aerial_superiority
+		icon = GFX_focus_NORDIC_dem_selector_airforce
+		x = 47
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_sorry_state_of_the_airforce}
+		mutually_exclusive = {focus = FED_airforce_supports_the_army}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_create_aircraft_factories
+		icon = GFX_focus_generic_aircraft_production
+		x = 46
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_dedicated_cas focus = FED_multi_role_fighters focus = FED_dedicated_aerial_supremacy_fighters}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_finish_airforce_reforms
+		icon = GFX_focus_SOV_flying_clubs
+		x = 46
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_create_aircraft_factories}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_fund_skid
+		icon = GFX_focus_YUG_ikarus
+		x = 47
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_create_aircraft_factories}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_fund_rubbi
+		icon = GFX_focus_YUG_rogozarski
+		x = 45
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_create_aircraft_factories}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_naval_restoration
+		icon = GFX_focus_generic_refit_civilian_ships
+		x = 54
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_rule_from_the_waves
+		icon = GFX_goal_generic_navy_battleship
+		x = 55
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_naval_restoration}
+		mutually_exclusive = {focus = FED_rule_from_the_depths}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_rule_from_the_depths
+		icon = GFX_goal_generic_navy_submarine
+		x = 53
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_naval_restoration}
+		mutually_exclusive = {focus = FED_rule_from_the_waves}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_destroyer_focus
+		icon = GFX_focus_generic_destroyer
+		x = 55
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_rule_from_the_waves }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_ask_the_us_for_help
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 57
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_rule_from_the_waves }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_long_range_subs
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 53
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_rule_from_the_depths}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+	focus = {
+		id = FED_expand_ship_yards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 54
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_long_range_subs focus = FED_destroyer_focus}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_create_the_office_of_naval_intelligence
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 54
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_rule_from_the_depths focus = FED_rule_from_the_waves}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+
+	focus = {
+		id = FED_ask_germany_for_help
+		icon = GFX_focus_BRA_german_submarine_development
+		x = 51
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {focus = FED_rule_from_the_depths}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_political_power = 150
+
+		}
+		
+	}
+}
